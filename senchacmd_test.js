@@ -39,12 +39,12 @@ exports.senchacmd = {
     // made a 'production' folder with 'app-all-sencha-build.js'
     // inside
     // ---------------------------------------------
-    var folder = 'test/fixtures/testworkspace/build/testapp/production/'
+    var folder = __dirname + '/fixtures/testworkspace/build/testapp/production/'
         , file = path.join(folder, 'app-all-sencha-build.js')
         ;
 
-    test.ok(fs.existsSync(folder), 'There should be a production folder.');
-    test.ok(fs.existsSync(file), 'There should be a production app-all-sencha-build.js file.');
+    test.ok(fs.existsSync(folder), 'There should be a production folder. (' + folder + ')');
+    test.ok(fs.existsSync(file), 'There should be a production app-all-sencha-build.js file. (' + file + ')');
 
     test.done();
   },
@@ -55,12 +55,12 @@ exports.senchacmd = {
     // Running the task with options should have made
     // a testing folder with the same structure
     // ---------------------------------------------
-    var folder = 'test/fixtures/testworkspace/build/testapp/testing/'
+    var folder = __dirname + '/fixtures/testworkspace/build/testapp/testing/'
         , file = path.join(folder, 'app-all-sencha-build.js')
         ;
 
-    test.ok(fs.existsSync(folder), 'There should be a testing folder.');
-    test.ok(fs.existsSync(file), 'There should be a testing app-all-sencha-build.js file.');
+    test.ok(fs.existsSync(folder), 'There should be a testing folder. (' + folder + ')');
+    test.ok(fs.existsSync(file), 'There should be a testing app-all-sencha-build.js file. (' + file + ')');
 
     test.done();
   },
